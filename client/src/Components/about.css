@@ -1,0 +1,57 @@
+/* About section specific styling */
+#about {
+  background-color: var(--neutral-color);
+  color: var(--dark-color);
+  padding: 4rem 2rem;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive design for About section */
+@media (max-width: 768px) {
+  .about-details {
+    flex-direction: column;
+  }
+
+  .about-image {
+    margin-bottom: 2rem;
+  }
+}

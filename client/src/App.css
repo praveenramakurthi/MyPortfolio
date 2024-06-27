@@ -1,0 +1,234 @@
+/* Colors */
+:root {
+  --primary-color: #3498db; /* Blue */
+  --accent-color: #e74c3c; /* Red */
+  --neutral-color: #ecf0f1; /* Light Gray */
+  --dark-color: #2c3e50; /* Dark Gray */
+  --white-color: #fff; /* White */
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Ensure body and html take full height */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--neutral-color);
+  color: var(--dark-color);
+}
+
+/* Ensure App component takes full height */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content area should take remaining space */
+main {
+  flex: 1;
+  width: 100%;
+}
+
+/* Footer styling */
+footer {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure sections take full width and padding for separation */
+section {
+  padding: 4rem 2rem;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+  background: var(--white-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+/* Keyframes for fade-in-up animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--white-color);
+  padding: 1rem 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+header nav ul li a {
+  color: var(--white-color);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: var(--neutral-color);
+}
+
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--white-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+header nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Home section specific animation */
+#home {
+  animation-delay: 0.2s;
+}
+
+/* About section specific animation */
+#about {
+  animation-delay: 0.4s;
+}
+
+/* Portfolio section specific animation */
+#portfolio {
+  animation-delay: 0.6s;
+}
+
+/* Contact section specific animation */
+#contact {
+  animation-delay: 0.8s;
+}
+
+/* Add a hover effect to project entries */
+.projects div {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background: var(--white-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.projects div:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  section {
+    padding: 2rem;
+  }
+
+  .projects div {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav ul li {
+    margin: 0.3rem 0;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
+  footer {
+    padding: 0.5rem;
+  }
+}
+/* Home section specific styling */
+#home {
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  height: 100vh;
+}
+
+.home-content {
+  max-width: 700px;
+}
+
+.home-content h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.home-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+}
+
+.home-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--neutral-color);
+  color: var(--dark-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta:hover {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
