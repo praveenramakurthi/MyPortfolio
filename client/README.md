@@ -37,6 +37,4 @@ Welcome to my portfolio repository! This project showcases my work and skills in
 ## Get in Touch
 Feel free to reach out if you have any questions or if you’re interested in working together.
 
-## License
-This project is licensed under the MIT License.
 
