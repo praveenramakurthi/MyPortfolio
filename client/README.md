@@ -1,4 +1,4 @@
-![Screenshot (54)](https://github.com/praveenramakurthi/MyPortfolio/assets/81426194/434974d7-911e-473b-a1d4-c95a16949581)# My Portfolio
+# My Portfolio
 
 Welcome to my portfolio repository! This project showcases my work and skills in web development.
 
