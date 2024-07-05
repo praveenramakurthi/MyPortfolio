@@ -18,7 +18,7 @@ const About = () => {
                         </p>
                     </div>
                     <div className="about-image">
-                        <img src="path/to/your-photo.jpg" alt="praveen" />
+                        <img src="20230908_161410.jpg" alt="praveen" />
                     </div>
                 </div>
             </div>
