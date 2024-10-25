@@ -6,6 +6,7 @@
   --dark-color: #2c3e50; /* Dark Gray */
   --white-color: #fff; /* White */
 }
+
 *,
 *::before,
 *::after {
@@ -13,8 +14,8 @@
   margin: 0;
   padding: 0;
 }
-/* Ensure body and html take full height */
-html, body {
+
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -22,6 +23,15 @@ html, body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--neutral-color);
   color: var(--dark-color);
+}
+
+/* Hide scrollbar but allow scrolling */
+body::-webkit-scrollbar {
+  display: none;
+}
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 /* Ensure App component takes full height */
@@ -34,6 +44,7 @@ html, body {
 /* Main content area should take remaining space */
 main {
   flex: 1;
+  overflow: auto;
   width: 100%;
 }
 
@@ -56,7 +67,6 @@ section {
   background: var(--white-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
-  border-radius: 10px;
 }
 
 /* Keyframes for fade-in-up animation */
@@ -185,6 +195,7 @@ header nav ul li a:hover::after {
     padding: 0.5rem;
   }
 }
+
 /* Home section specific styling */
 #home {
   background: linear-gradient(90deg, var(--primary-color) 0%, var(--accent-color) 100%);
@@ -195,6 +206,7 @@ header nav ul li a:hover::after {
   text-align: center;
   padding: 4rem 2rem;
   height: 100vh;
+  
 }
 
 .home-content {
@@ -209,11 +221,13 @@ header nav ul li a:hover::after {
 .home-content h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: normal;
 }
 
 .home-content p {
   font-size: 1.2rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin-bottom: 2rem;
 }
 
